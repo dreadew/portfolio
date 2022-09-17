@@ -6,7 +6,10 @@ function updateProgressBar() {
 }
 
 function getScrollPercentage() {
-    return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)
+  e = ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100) 
+  if (e >= 100) e = 100
+  if (e <= 0) e = 0
+  return e
 }
 
 updateProgressBar()
